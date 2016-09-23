@@ -1,0 +1,54 @@
+{
+  "CN": "kubernetes",
+  "hosts": [
+    "kube-controller13.vmware.local",
+    "kube-etcd0.vmware.local",
+    "kube-etcd1.vmware.local",
+    "kube-etcd2.vmware.local",
+    "kube-controller0.vmware.local",
+    "kube-controller1.vmware.local",
+    "kube-controller2.vmware.local",
+    "kube-worker0.vmware.local",
+    "kube-worker1.vmware.local",
+    "kube-worker2.vmware.local",
+    "kube-controller13",
+    "kube-etcd0",
+    "kube-etcd1",
+    "kube-etcd2",
+    "kube-controller0",
+    "kube-controller1",
+    "kube-controller2",
+    "kube-worker0",
+    "kube-worker1",
+    "kube-worker2",
+    "kube-etcd0",
+    "kube-etcd0",
+    "192.168.3.201",
+    "172.16.0.1",
+    "192.168.3.176",
+    "192.168.3.177",
+    "192.168.3.178",
+    "192.168.3.179",
+    "192.168.3.180",
+    "192.168.3.181",
+    "192.168.3.182",
+    "192.168.3.183",
+    "192.168.3.184",
+    "10.240.0.32",
+    "127.0.0.1",
+    "172.16.0.10"
+  ],
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "US",
+      "L": "Arvada",
+      "O": "Kubernetes",
+      "OU": "Kubernetes Lab",
+      "ST": "Colorado"
+    }
+  ]
+}
