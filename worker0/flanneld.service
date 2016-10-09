@@ -1,0 +1,19 @@
+[Unit]
+Description=Flanneld overlay address etcd agent
+Wants=etcd.service
+After=etcd.service
+After=network.target
+Before=docker.service
+
+[Service]
+Type=notify
+EnvironmentFile=/etc/sysconfig/flanneld
+EnvironmentFile=-/etc/sysconfig/docker-network
+ExecStart=/usr/bin/flanneld -etcd-endpoints=https://kube-etcd0.vmware.local:2379,https://kube-etcd1.vmware.local:2379,https://kube-etcd2.vmware.local:2379 -etcd-prefix=/coreos.com/network/ -etcd-cafile=/var/lib/kubernetes/ca.pem
+ExecStartPost=/usr/libexec/flannel/mk-docker-opts.sh -k DOCKER_NETWORK_OPTIONS -d /run/flannel/docker
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+RequiredBy=docker.service
